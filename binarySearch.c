@@ -11,6 +11,7 @@ int binaryIterative(int a[],int n,int key){
             high = mid-1;
         }
         else{
+            
             low = mid +1;
         }
         
@@ -41,9 +42,26 @@ int main(){
     int a[] = {1,5,8,10,14,15};
     int key = 14;
      n = sizeof(a)/sizeof(a[0]);
-    // int loc = binaryIterative(a,n,key);
-    int pos = binaryRecursive(a,0,n-1,key);
-    printf("key = %d is at index = %d\n",key,pos);
+    int loc1 = binaryIterative(a,n,1);
+    int pos1 = binaryRecursive(a,0,n-1,15);
+    int loc2 = binaryIterative(a,n,15);
+    int pos2 = binaryRecursive(a,0,n-1,1);
+    int loc3 = binaryIterative(a,n,8);
+    int pos3 = binaryRecursive(a,0,n-1,10);
+    printf("key = %d is at index = %d\n",1,loc1);
+    printf("key = %d is at index = %d\n",15,pos1);
+    printf("key = %d is at index = %d\n",1,pos2);
+    printf("key = %d is at index = %d\n",15,loc2);
+    printf("key = %d is at index = %d\n",8,loc3);
+    printf("key = %d is at index = %d\n",10,pos3);
+    //OUTPUTS:
+        // key = 1 is at index = 0
+        // key = 15 is at index = 5
+        // key = 1 is at index = 0
+        // key = 15 is at index = 5
+        // key = 8 is at index = 2
+        // key = 10 is at index = 3
     return 0;
     
 }
+
