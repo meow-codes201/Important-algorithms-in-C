@@ -48,12 +48,17 @@ int main(){
     int pos2 = binaryRecursive(a,0,n-1,1);
     int loc3 = binaryIterative(a,n,8);
     int pos3 = binaryRecursive(a,0,n-1,10);
+    int pos4 = binaryRecursive(a,0,n-1,100);
+    
     printf("key = %d is at index = %d\n",1,loc1);
     printf("key = %d is at index = %d\n",15,pos1);
     printf("key = %d is at index = %d\n",1,pos2);
     printf("key = %d is at index = %d\n",15,loc2);
     printf("key = %d is at index = %d\n",8,loc3);
     printf("key = %d is at index = %d\n",10,pos3);
+    if (pos4 == -1){
+        printf("Key does not exist\n");
+    }
     //OUTPUTS:
         // key = 1 is at index = 0
         // key = 15 is at index = 5
@@ -61,6 +66,7 @@ int main(){
         // key = 15 is at index = 5
         // key = 8 is at index = 2
         // key = 10 is at index = 3
+        // Key does not exist
     return 0;
     
 }
